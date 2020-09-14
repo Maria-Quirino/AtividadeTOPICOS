@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS</title>
+	<meta charset="utf-8">
+
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+
+	p{
+		font-variant: small-caps;
+		font: italic bold 50px Georgia, serif; 
+		font-size: 50px;
+		background-color: #87CEFA;
+		text-shadow: -25px 8px 2px gray;
+		text-transform: uppercase;
+	}	
+	b{
+		font-family: 'PT Sans Narrow', sans-serif;
+		text-align: left;
+		text-indent: 30px;
+	}
+	.cor{
+		background-color: #98FB98;
+	}
+	.titulo{
+		font-size: 15px;
+		font-family: 'PT Sans Narrow', sans-serif;
+	}
+
+	</style>
+<body>
+
+	<p align="center"> Cadastro de Curso </p>
+	<form name="Cadastro de Curso" method="post" action="processandodados.php">
+
+		<b>Nome Completo:</b><br> <textarea type="text" name="nome" style="resize: none;" rows="1" cols="40"/></textarea>  <br><br>
+
+		<b>Idade:</b><br> <textarea type="number" name="idade" minlength="2" maxlength="2" style="resize: none;" rows="1" cols="2" /></textarea><br><br>
+
+		<b>Data de Nascimento:<br> <span class="titulo" class="titulo">exemplo-(29/10/2003)</span> </b><br> <textarea type="text" name="Data" style="resize: none;" rows="1" cols="10"></textarea> <br><br>
+
+		<b>RG:</b><br> <textarea type="number" name="RG" minlength="9" maxlength="10" style="resize: none;" rows="1" cols="10"></textarea> <br><br>
+
+		<b>CPF:</b><br> <textarea type="number" name="CPF"   style="resize: none;" rows="1" cols="10"></textarea><br><br>
+
+		<b>CEP:</b><br> <textarea type="number" name="CEP" style="resize: none;" rows="1" cols="10"></textarea><br><br>
+
+		<b>Sexo:</b><br> <input type="radio" name="sexo" value="Masculino"> Masculino <input type="radio" name="sexo" value="Feminino"> Feminino <br><br>
+
+		<b>Qual é o curso de sua escolha:</b><br> <input type="radio" name="cursos" value="Informática">Informática <input type="radio" name="cursos" value="Mecânica">Mecânica
+		<input type="radio" name="cursos" value="Emfermagem">Emfermagem
+		<input type="radio" name="cursos" value="Geodésia">Geodésia
+		<input type="radio" name="cursos" value="Qualidade">Qualidade <br><br>
+
+		<b>Qual a sua disponibilidade de período:</b><br> <input type="checkbox" name="periodo" value="Manhã">Manhã
+		<input type="checkbox" name="periodo" value="Tarde">Tarde
+		<input type="checkbox" name="periodo" value="Noite">Noite <br><br>
+
+		<b class="cor">OBSERVAÇÃO:</b><br> <textarea type="text" name="Observação" style="resize: none;" rows="4" cols="40">O periodo do curso vai ser selecionado de acordo com a quantidade de vagas então se você tiver dois ou três periodos livres no dia, é importante selecioná-los.</textarea> <br><br>
+
+		<b>Segunda opção de curso:</b><br>      
+    	<select name="opção2" size="3" multiple>
+      	<option value="Informática">Informática</option>
+      	<option value="Mecânica" selected>Mecânica</option>
+      	<option value="Emfermagem">Emfermagem</option>
+      	<option value="Geodésia">Geodésia</option>
+      	<option value="Qualidade">Qualidade</option>
+   		</select> <br><br>
+
+   		<input type="reset" name="reset" value="Limpar Dados"> <input type="submit" name="submit" value="Enviar Dados">
+
+
+	</form>
+
+</body>
+</html>
